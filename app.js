@@ -1,6 +1,4 @@
 // exercise 1
-//Tạo một chương trình cho phép người dùng nhập vào 2 số và cho phép người dùng chọn phép tính cộng, trừ, nhân, chia. Rồi thực hiện cộng trừ nhân chia 2 số người dùng vừa nhập rồi trả về kết quả.
-
 
 // var input1 = prompt(`
 //   số a là
@@ -17,7 +15,7 @@
 // var calculation = prompt(`
 //   chọn phép tính
 //   1.cộng
-//   2.trừ 
+//   2.trừ
 //   3.nhân
 //   4.chia
 // `)
@@ -42,7 +40,7 @@
 
 // count(num1, num2, isCalculation)
 
-// exercise 2 
+// exercise 2
 
 // var shop = [
 //     {
@@ -74,7 +72,6 @@
 
 // var num = input.split('')
 
-
 // function search(num) {
 //     return shop.filter((item) => {
 //         return num.includes(item.id)
@@ -102,14 +99,12 @@
 //     alert(`tổng tiền cần thanh toán là ${total}`)
 // }
 
-
 // exercise  3
 
 // var input = prompt(`nhập số  bất kỳ từ 1->10 vào đây để kiểm tra`)
 
 // var isNum = +input
 // var isArray = [isNum]
-
 
 // var numRandom = Math.ceil(Math.random() * 10)
 
@@ -133,44 +128,37 @@
 
 // test(isArray, numRandom)
 
-
 //-----------------------------------------------------------------------------------------------------------------------------
 
 // Exercise 01
 //   -----------
 //   Highlight all of the words over 8 characters long in the paragraph text (with a yellow background for example)
 
-const text = document.getElementById('text')
+const text = document.getElementById("text");
 
-const arrayText = text.innerText.split(' ')
+const arrayText = text.innerText.split(" ");
 const result = arrayText.map((item) => {
-  return item.length > 8 ? `<span style = "background-color:yellow">${item}</span>` : item
-})
+  return item.length > 8
+    ? `<span style = "background-color:yellow">${item}</span>`
+    : item;
+});
 
-text.innerHTML = result.join()
-
-
+text.innerHTML = result.join();
 
 // Exercise 02
 // -----------
 // Add a link back to the source of the text after the paragraph tag.
 // (https://forcemipsum.com/)
 
-
-const link = document.createElement('a')
-link.href = 'https://forcemipsum.com/'
-link.innerText = 'click link'
-document.body.appendChild(link)
-
+const link = document.createElement("a");
+link.href = "https://forcemipsum.com/";
+link.innerText = "click link";
+document.body.appendChild(link);
 
 // Exercise 03
 // -----------
 // Split each new sentence on to a separate line in the paragraph text.
 // A sentence can be assumed to be a string of text terminated with a period (.)
-
-
-
-
 
 // Exercise 04
 //   -----------
@@ -178,12 +166,10 @@ document.body.appendChild(link)
 //   You can assume that all words are separated by one singular whitespace.
 
 // const text = document.getElementById('text')
-const totalWord = text.innerText.split(' ').length
-const newTag = document.createElement('div')
-newTag.innerText = `${totalWord} word`
-document.body.appendChild(newTag)
-
-
+const totalWord = text.innerText.split(" ").length;
+const newTag = document.createElement("div");
+newTag.innerText = `${totalWord} word`;
+document.body.appendChild(newTag);
 
 /*
   Exercise 05
@@ -192,13 +178,13 @@ document.body.appendChild(newTag)
 */
 
 // const text = document.getElementById('text')
-const newArray = text.innerText.split('')
+const newArray = text.innerText.split("");
 const ouutput = newArray.map((item) => {
-  if (item == '?') {
-    item = '🤔'
-  } else if (item == '!') {
-    item = '😲'
+  if (item == "?") {
+    item = "🤔";
+  } else if (item == "!") {
+    item = "😲";
   }
-  return item
-})
-text.innerHTML = ouutput.join('')
+  return item;
+});
+text.innerHTML = ouutput.join("");

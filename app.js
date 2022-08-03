@@ -134,26 +134,26 @@
 //   -----------
 //   Highlight all of the words over 8 characters long in the paragraph text (with a yellow background for example)
 
-const text = document.getElementById("text");
+// const text = document.getElementById("text");
 
-const arrayText = text.innerText.split(" ");
-const result = arrayText.map((item) => {
-  return item.length > 8
-    ? `<span style = "background-color:yellow">${item}</span>`
-    : item;
-});
+// const arrayText = text.innerText.split(" ");
+// const result = arrayText.map((item) => {
+//   return item.length > 8
+//     ? `<span style = "background-color:yellow">${item}</span>`
+//     : item;
+// });
 
-text.innerHTML = result.join();
+// text.innerHTML = result.join();
 
 // Exercise 02
 // -----------
 // Add a link back to the source of the text after the paragraph tag.
 // (https://forcemipsum.com/)
 
-const link = document.createElement("a");
-link.href = "https://forcemipsum.com/";
-link.innerText = "click link";
-document.body.appendChild(link);
+// const link = document.createElement("a");
+// link.href = "https://forcemipsum.com/";
+// link.innerText = "click link";
+// document.body.appendChild(link);
 
 // Exercise 03
 // -----------
@@ -166,10 +166,10 @@ document.body.appendChild(link);
 //   You can assume that all words are separated by one singular whitespace.
 
 // const text = document.getElementById('text')
-const totalWord = text.innerText.split(" ").length;
-const newTag = document.createElement("div");
-newTag.innerText = `${totalWord} word`;
-document.body.appendChild(newTag);
+// const totalWord = text.innerText.split(" ").length;
+// const newTag = document.createElement("div");
+// newTag.innerText = `${totalWord} word`;
+// document.body.appendChild(newTag);
 
 /*
   Exercise 05
@@ -178,13 +178,61 @@ document.body.appendChild(newTag);
 */
 
 // const text = document.getElementById('text')
-const newArray = text.innerText.split("");
-const ouutput = newArray.map((item) => {
-  if (item == "?") {
-    item = "🤔";
-  } else if (item == "!") {
-    item = "😲";
-  }
-  return item;
-});
-text.innerHTML = ouutput.join("");
+// const newArray = text.innerText.split("");
+// const ouutput = newArray.map((item) => {
+//   if (item == "?") {
+//     item = "🤔";
+//   } else if (item == "!") {
+//     item = "😲";
+//   }
+//   return item;
+// });
+// text.innerHTML = ouutput.join("");
+
+//---------------------------------------------------------
+// bài 1
+// function test() {
+//   console.log(a);
+//   console.log(foo());
+
+//   var a = 1;
+//   function foo() {
+//      return 2;
+//   }
+// }
+
+// test();
+
+//bài 2 :
+// var a = 1;
+
+// function someFunction(number) {
+//   function otherFunction(input) {
+//     return a;
+//   }
+
+//   a = 5;
+
+//   return otherFunction;
+// }
+
+// var firstResult = someFunction(9);
+// var result = firstResult(2);
+
+//bài 3
+var fullname = "John Doe";
+var obj = {
+  fullname: "Colin Ihrig",
+  prop: {
+    fullname: "Aurelio De Rosa",
+    getFullname: function () {
+      return this.fullname;
+    },
+  },
+};
+
+console.log(obj.prop.getFullname());
+
+var test = obj.prop.getFullname;
+
+console.log(test());

@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bai tap</title>
+  </head>
 
-</head>
-
-<body>
-    <h1 id="Heading">Heading</h1>
+  <body>
+    <!-- <h1 id="Heading">Heading</h1>
     <p id="text">Hey, you're not permitted in there. It's restricted. You'll be deactivated for sure.. Don't call me a
         mindless philosopher, you overweight glob of grease! Now come out before somebody sees you. Secret mission? What
         plans? What are you talking about? I'm not getting in there! I'm going to regret this. There goes another one.
@@ -26,8 +24,27 @@
         piece of junk. She'll make point five beyond the speed of light. She may not look like much, but she's got it
         where it counts, kid. I've added some special modifications myself. We're a little rushed, so if you'll hurry
         aboard we'll get out of here. Hello, sir. Which way? All right, men. Load your weapons! Stop that ship! Blast
-        'em! Chewie, get us out of here! Oh, my. I'd forgotten how much I hate space travel. Run, Luke! Run!</p>
-    <script src="./app.js"></script>
-</body>
+        'em! Chewie, get us out of here! Oh, my. I'd forgotten how much I hate space travel. Run, Luke! Run!</p> -->
 
+    <ul>
+      <li>
+        Bài 1: kết quả là undifine và 2, vì thằng var a và thằng declaration
+        function đều có hoisting
+      </li>
+      <li>
+        Bài 2: kết quả bằng 5 vì thằng a được gán lại bằng 5 nên khi hàm dc gọi
+        thì biến a global đã bằng 5
+      </li>
+      <li>
+        Bài 3: kết quả là (Aurelio De Rosa) và (John Doe) : kết quả của log đầu
+        tiên là this chỉ đơn giản là truy cập tới ngử cảnh thực thi của nó thôi
+        (tức là thằng prop), kết quả thứ 2 là vì thằng test nó dc gán lại là
+        function của thằng getFullname nên nó tạo ra một scope với ngử cảnh thực
+        thi là window lúc này window có một biến fullname this.full name sẽ lấy
+        value của biến fullname ngoài window
+      </li>
+    </ul>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
